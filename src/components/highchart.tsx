@@ -42,6 +42,7 @@ const ChartComponent: React.FC = () => {
             { name: 'Tailwind', y: 2, z: 2 },
             { name: 'Angular', y: 3, z: 3 },
             { name: 'Nextjs', y: 5, z: 5 },
+            { name: 'Typescript', y: 5, z: 5 },
             { name: 'React', y: 7, z: 7 },
             { name: 'SAAS/LESS', y: 7, z: 7 },
             { name: 'JavaScript', y: 8, z: 8 },
@@ -63,7 +64,7 @@ const ChartComponent: React.FC = () => {
     });
   }, []);
 
-  return <div id="container" />;
+  return <div id="container" className="m-auto max-w-md" />;
 };
 
 export default ChartComponent;

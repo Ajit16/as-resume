@@ -1,7 +1,8 @@
 {
-  "name": "ajit-resume",
+  "name": "Ajit Singh Resume",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,7 +13,8 @@
     "highcharts": "^11.4.8",
     "next": "14.2.11",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@types/highcharts": "^7.0.0",

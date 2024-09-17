@@ -10,8 +10,14 @@ import JavaScriptIcon from '@/assets/javascript-js.svg';
 import NextJsIcon from '@/assets/nextjs.svg';
 import NpmIcon from '@/assets/npm.svg';
 
+interface StaticImageData {
+  src: string;
+  height: number;
+  width: number;
+  blurDataURL?: string;
+}
 interface LogoArrProps {
-  img: any;
+  img: StaticImageData;
   name: string;
 }
 
@@ -36,9 +42,9 @@ export default function LogoSlider() {
           <Image
             src={item?.img || ''}
             alt="logo"
-            width={60}
-            height={60}
-            className="w-auto min-w-16 max-w-16 max-h-16"
+            width={50}
+            height={50}
+            className="w-14 max-h-16"
           />
         </li>
       ))}
