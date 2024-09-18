@@ -8,7 +8,7 @@ import VariablePie from 'highcharts/modules/variable-pie';
 Exporting(Highcharts);
 VariablePie(Highcharts);
 
-const ChartComponent: React.FC = () => {
+const ChartComp: React.FC = () => {
   useEffect(() => {
     Highcharts.chart('container', {
       chart: {
@@ -67,4 +67,4 @@ const ChartComponent: React.FC = () => {
   return <div id="container" className="m-auto max-w-md" />;
 };
 
-export default ChartComponent;
+export default ChartComp;

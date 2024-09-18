@@ -1,13 +1,20 @@
-import EmploymentHistory from '@/components/employment-history';
-import Chart from '@/components/highchart';
-import LogoSlider from '@/components/logo-slider';
-import Portfolio from '@/components/portfolio';
 import Image from 'next/image';
+import envelopeIcon from '@/assets/envelope.svg';
+import phoneIcon from '@/assets/phone.svg';
 import LinkedInIcon from '@/assets/linkedin.svg';
 import GithubIcon from '@/assets/githubicon.svg';
 import NPMIcon from '@/assets/npmicon.svg';
-// import curveImg from '@/assets/curve.svg';
+import LinkIcon from '@/assets/link-2.svg';
+import DocDownloadIcon from '@/assets/document-download.svg';
 import AjitImg from '@/assets/ajit.jpg';
+import EmploymentHistory from '@/components/employment-history';
+import LogoSlider from '@/components/logo-slider';
+import Portfolio from '@/components/portfolio';
+import dynamic from 'next/dynamic';
+
+const ChartComp = dynamic(() => import('@/components/highchart'), {
+  ssr: false
+});
 interface skillsProps {
   name: string;
   value: string;
@@ -33,29 +40,25 @@ const Detail = {
   content: [
     {
       title: 'email',
-      MuIcon: 'email',
-      icon: '',
+      icon: envelopeIcon,
       value: 'ajit.dhiman16@gmail.com',
       link: 'ajit.dhiman16@gmail.com',
       linkType: 'emailTo'
     },
     {
       title: 'phone',
-      MuIcon: 'phone_iphone',
-      icon: '',
+      icon: phoneIcon,
       value: '+91 8872295804',
       link: '+91 8872295804',
       linkType: 'tel'
     },
     {
       title: 'phone',
-      MuIcon: 'phone_iphone',
-      icon: '',
+      icon: phoneIcon,
       value: '+91 7009751937',
       link: '+91 7009751937',
       linkType: 'tel'
     },
-
     {
       title: 'Linkedin',
       MuIcon: '',
@@ -90,19 +93,18 @@ const Detail = {
     },
     {
       title: 'Profile Link',
-      MuIcon: 'link',
-      icon: '',
+      icon: LinkIcon,
       value: 'https://ajit16.github.io/',
       link: 'https://ajit16.github.io/',
       linkType: ''
     },
     {
       title: 'Download Resume',
-      MuIcon: 'download',
-      icon: '',
+      icon: DocDownloadIcon,
       value: 'Download my updated resume',
-      link: '../media/Ajit-Singh-Resume.pdf',
-      linkType: ''
+      link: 'pdf/Ajit-Singh-Resume.pdf',
+      linkType: '',
+      download: true
     }
   ]
 };
@@ -123,7 +125,6 @@ export default function Home() {
             className="w-full"
           />
           <span className="absolute top-0 -right-1">
-            {/* <curveImg /> */}
             <svg
               width="100%"
               height="100%"
@@ -170,6 +171,7 @@ export default function Home() {
                     href={`${item.linkType ? item.linkType + ':' : ''}${
                       item.link
                     }`}
+                    className="print:text-sm"
                   >
                     {item.value}
                   </a>
@@ -178,10 +180,10 @@ export default function Home() {
             </ul>
           </div>
           <div className="py-6 text-white">
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 pr-2">
               {Detail.content.slice(4).map((item, i) => (
                 <li key={i} className="flex items-center gap-2">
-                  <span className="w-5 flex justify-center">
+                  <span className="w-5 min-w-5 flex justify-center">
                     {item.MuIcon && (
                       <span className="material-symbols-outlined">
                         {item.MuIcon}
@@ -201,6 +203,8 @@ export default function Home() {
                     href={`${item.linkType ? item.linkType + ':' : ''}${
                       item.link
                     }`}
+                    className="print:text-sm break-words"
+                    download={!!item.download}
                   >
                     {item.value}
                   </a>
@@ -265,7 +269,7 @@ export default function Home() {
         </h2>
         <hr className="my-4" />
         <div className="px-4">
-          <Chart />
+          <ChartComp />
         </div>
       </div>
 
