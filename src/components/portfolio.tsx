@@ -1,92 +1,117 @@
-import Image from 'next/image';
-import AjnaImg from '@/assets/projects/ajna.jpg';
-import DSRProject from '@/assets/projects/dsr.jpg';
-import FProject from '@/assets/projects/1851.png';
+import Image from "next/image";
+import AjnaImg from "@/assets/projects/ajna.jpg";
+import DSRProject from "@/assets/projects/dsr.jpg";
+import FProject from "@/assets/projects/1851.png";
+import AirportExpress from "@/assets/projects/airportexpress.webp";
 
 const PortfolioList = [
   {
-    name: 'Premier Talent Partners (AJNA)',
+    name: "The Airport Express",
     detail:
-      'Developed a web application to streamline staff recruitment services, enhancing the efficiency of the hiring process. This involved designing a user-friendly interface, integrating robust search and filtering functionalities, and implementing features for job postings, candidate tracking, and application management, ultimately improving the overall recruitment workflow for users.',
-    url: ['https://www.premiertalentpartners.com/'],
+      "Developed a modern, SEO-optimized airport transfer booking platform that enables users to book reliable transportation services with a seamless and responsive user experience. Built with Next.js and TypeScript, the application focuses on performance, scalability, secure online payments, and optimized search engine visibility while delivering a consistent experience across desktop and mobile devices.",
+    url: ["https://theairportexpress.com"],
+    subUrl: [],
+    image: AirportExpress,
+    video: "",
+    technologies: [
+      "NextJs",
+      "Typescript",
+      "TailwindCSS",
+      "Zustand",
+      "Headless UI",
+      "SEO Friendly",
+      "Stripe",
+      "Google Tag Manager",
+      "Eslint",
+      "Emailer ",
+    ],
+  },
+  {
+    name: "Premier Talent Partners (AJNA)",
+    detail:
+      "Developed a web application to streamline staff recruitment services, enhancing the efficiency of the hiring process. This involved designing a user-friendly interface, integrating robust search and filtering functionalities, and implementing features for job postings, candidate tracking, and application management, ultimately improving the overall recruitment workflow for users.",
+    url: ["https://www.premiertalentpartners.com/"],
     subUrl: [
       {
-        url: 'https://premierlogin.ajnainside.com/',
-        subtitle: '(Landing page)'
+        url: "https://premierlogin.ajnainside.com/",
+        subtitle: "(Landing page)",
       },
       {
-        url: 'https://premiercandidate.ajnainside.com',
-        subtitle: '(candidate portal)'
+        url: "https://premiercandidate.ajnainside.com",
+        subtitle: "(candidate portal)",
       },
       {
-        url: 'https://premierclient.ajnainside.com',
-        subtitle: '(client portal)'
+        url: "https://premierclient.ajnainside.com",
+        subtitle: "(client portal)",
       },
-      { url: 'https://premieradmin.ajnainside.com', subtitle: '(admin portal)' }
+      {
+        url: "https://premieradmin.ajnainside.com",
+        subtitle: "(admin portal)",
+      },
     ],
     image: AjnaImg,
-    video: '',
+    video: "",
     technologies: [
-      'React',
-      'Typescript',
-      'Saas',
-      'Redux',
-      'Node',
-      'MongoDB',
-      'AWS',
-      'Big Calender'
-    ]
+      "React",
+      "Typescript",
+      "Saas",
+      "Redux",
+      "Node",
+      "MongoDB",
+      "AWS",
+      "Big Calender",
+    ],
   },
   {
-    name: 'Daily Status Reports',
+    name: "Daily Status Reports",
     detail:
-      'Developed a web application to efficiently track and record employee daily status data. The application features an intuitive interface for employees to update their status, and includes backend functionality for data storage, reporting, and analysis. This system streamlined daily reporting processes, improved data accuracy, and facilitated better management oversight.',
-    url: ['dsr.closeloop.com'],
+      "Developed a web application to efficiently track and record employee daily status data. The application features an intuitive interface for employees to update their status, and includes backend functionality for data storage, reporting, and analysis. This system streamlined daily reporting processes, improved data accuracy, and facilitated better management oversight.",
+    url: ["dsr.closeloop.com"],
     subUrl: [
       {
-        url: 'dsr.closeloop.dev',
-        subtitle: '(Dev Server link)'
-      }
+        url: "dsr.closeloop.dev",
+        subtitle: "(Dev Server link)",
+      },
     ],
     image: DSRProject,
-    video: '',
+    video: "",
     technologies: [
-      'React',
-      'Vite',
-      'Typescript',
-      'Saas',
-      'Node',
-      'MongoDB',
-      'AWS'
-    ]
+      "React",
+      "Vite",
+      "Typescript",
+      "Saas",
+      "Node",
+      "MongoDB",
+      "AWS",
+    ],
   },
   {
-    name: '1851 Franchise',
+    name: "1851 Franchise",
     detail:
-      'Developed a comprehensive web platform for 1851 Franchise to support franchise development and consulting services. The platform features tools for franchise marketing, operational guidance, and strategic planning, aimed at helping businesses expand through franchising. It includes user-friendly interfaces for both franchisors and potential franchisees, facilitating the management of franchise systems and the discovery of new business opportunities. The project streamlined the process of launching and managing franchises, enhancing overall efficiency and effectiveness for users.',
-    url: ['https://1851franchise.com/', 'https://1851dev.com'],
+      "Developed a comprehensive web platform for 1851 Franchise to support franchise development and consulting services. The platform features tools for franchise marketing, operational guidance, and strategic planning, aimed at helping businesses expand through franchising. It includes user-friendly interfaces for both franchisors and potential franchisees, facilitating the management of franchise systems and the discovery of new business opportunities. The project streamlined the process of launching and managing franchises, enhancing overall efficiency and effectiveness for users.",
+    url: ["https://1851franchise.com/", "https://1851dev.com"],
     subUrl: [
       {
-        url: 'https://admin.1851dev.com/site/login',
-        subtitle: 'Admin portal'
+        url: "https://admin.1851dev.com/site/login",
+        subtitle: "Admin portal",
       },
       {
-        url: 'https://1851dev.com/growth-club',
-        subtitle: '(sub domain)'
-      }
+        url: "https://1851dev.com/growth-club",
+        subtitle: "(sub domain)",
+      },
     ],
     image: FProject,
-    video: '',
+    video: "",
     technologies: [
-      'React',
-      'Nextjs',
-      'Typescript',
-      'Saas',
-      'Figma Design',
-      'MaterialUI',
-      'Tailwind'
-    ]
-  }
+      "React",
+      "Nextjs",
+      "Typescript",
+      "Saas",
+      "Figma Design",
+      "MaterialUI",
+      "Tailwind",
+    ],
+  },
 ];
 
 export default function Portfolio() {
@@ -101,7 +126,7 @@ export default function Portfolio() {
             <p>{item.detail}</p>
             {item.url && (
               <p>
-                <strong className="text-slate-700 text-sm">URL: </strong>{' '}
+                <strong className="text-slate-700 text-sm">URL: </strong>{" "}
                 {item.url.map((link, i) => (
                   <a href={link} key={i} target="_blank">
                     {link} {item.url.length !== i + 1 && <>, </>}
@@ -111,7 +136,7 @@ export default function Portfolio() {
             )}
             {item.subUrl && (
               <p>
-                <strong className="text-slate-700 text-sm">SUBURL: </strong>{' '}
+                <strong className="text-slate-700 text-sm">SUBURL: </strong>{" "}
                 {item.subUrl.map((link, i) => (
                   <>
                     <a href={link.url} key={i} target="_blank">
@@ -125,8 +150,8 @@ export default function Portfolio() {
             )}
             <p className="text-sm">
               <strong className="text-slate-700 uppercase">
-                Technologies:{' '}
-              </strong>{' '}
+                Technologies:{" "}
+              </strong>{" "}
               {/* {item.technologies.toString()} etc. */}
               {item.technologies.map((name) => (
                 <span

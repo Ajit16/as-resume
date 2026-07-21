@@ -1,19 +1,19 @@
-import Image from 'next/image';
-import envelopeIcon from '@/assets/envelope.svg';
-import phoneIcon from '@/assets/phone.svg';
-import LinkedInIcon from '@/assets/linkedin.svg';
-import GithubIcon from '@/assets/githubicon.svg';
-import NPMIcon from '@/assets/npmicon.svg';
-import LinkIcon from '@/assets/link-2.svg';
-import DocDownloadIcon from '@/assets/document-download.svg';
-import AjitImg from '@/assets/ajit.jpg';
-import EmploymentHistory from '@/components/employment-history';
-import LogoSlider from '@/components/logo-slider';
-import Portfolio from '@/components/portfolio';
-import dynamic from 'next/dynamic';
+import Image from "next/image";
+import envelopeIcon from "@/assets/envelope.svg";
+import phoneIcon from "@/assets/phone.svg";
+import LinkedInIcon from "@/assets/linkedin.svg";
+import GithubIcon from "@/assets/githubicon.svg";
+import NPMIcon from "@/assets/npmicon.svg";
+import LinkIcon from "@/assets/link-2.svg";
+import DocDownloadIcon from "@/assets/document-download.svg";
+import AjitImg from "@/assets/ajit.jpg";
+import EmploymentHistory from "@/components/employment-history";
+import LogoSlider from "@/components/logo-slider";
+import Portfolio from "@/components/portfolio";
+import dynamic from "next/dynamic";
 
-const ChartComp = dynamic(() => import('@/components/highchart'), {
-  ssr: false
+const ChartComp = dynamic(() => import("@/components/highchart"), {
+  ssr: false,
 });
 interface skillsProps {
   name: string;
@@ -21,92 +21,95 @@ interface skillsProps {
 }
 
 const FESkills: skillsProps[] = [
-  { name: 'HTML 5', value: '100%' },
-  { name: 'CSS', value: '100%' },
-  { name: 'Bootstrap', value: '100%' },
-  { name: 'Tailwind', value: '100%' },
-  { name: 'Javascript', value: '90%' },
-  { name: 'Reactjs', value: '95%' },
-  { name: 'Redux', value: '95%' },
-  { name: 'Nextjs', value: '90%' },
-  { name: 'Angular', value: '70%' },
-  { name: 'Typescript', value: '90%' }
+  { name: "HTML 5", value: "100%" },
+  { name: "CSS", value: "100%" },
+  { name: "Bootstrap", value: "100%" },
+  { name: "Tailwind", value: "100%" },
+  { name: "JavaScript", value: "90%" },
+  { name: "Reactjs", value: "95%" },
+  { name: "NextJs", value: "90%" },
+  { name: "Redux", value: "95%" },
+  { name: "Angular", value: "60%" },
+  { name: "TypeScript", value: "90%" },
 ];
-const BESkills: skillsProps[] = [{ name: 'Nodejs/MongoDB', value: '50%' }];
+const BESkills: skillsProps[] = [
+  { name: "Nodejs/MongoDB", value: "50%" },
+  { name: "PostgreSQL", value: "50%" },
+];
 
 const Detail = {
-  name: 'Ajit Singh',
-  position: 'Frontend Team Lead',
+  name: "Ajit Singh",
+  position: "Frontend Team Lead",
   content: [
     {
-      title: 'email',
+      title: "email",
       icon: envelopeIcon,
-      value: 'ajit.dhiman16@gmail.com',
-      link: 'ajit.dhiman16@gmail.com',
-      linkType: 'emailTo'
+      value: "ajit.dhiman16@gmail.com",
+      link: "ajit.dhiman16@gmail.com",
+      linkType: "emailTo",
     },
     {
-      title: 'phone',
+      title: "phone",
       icon: phoneIcon,
-      value: '+91 8872295804',
-      link: '+91 8872295804',
-      linkType: 'tel'
+      value: "+91 8872295804",
+      link: "+91 8872295804",
+      linkType: "tel",
     },
     {
-      title: 'phone',
+      title: "phone",
       icon: phoneIcon,
-      value: '+91 7009751937',
-      link: '+91 7009751937',
-      linkType: 'tel'
+      value: "+91 7009751937",
+      link: "+91 7009751937",
+      linkType: "tel",
     },
     {
-      title: 'Linkedin',
-      MuIcon: '',
+      title: "Linkedin",
+      MuIcon: "",
       icon: LinkedInIcon,
-      value: 'https://www.linkedin.com/in/ajit-singh-panesar/',
-      link: 'https://www.linkedin.com/in/ajit-singh-panesar/',
-      linkType: ''
+      value: "https://www.linkedin.com/in/ajit-singh-panesar/",
+      link: "https://www.linkedin.com/in/ajit-singh-panesar/",
+      linkType: "",
     },
     {
-      title: 'Github',
-      MuIcon: '',
+      title: "Github",
+      MuIcon: "",
       icon: GithubIcon,
-      value: 'https://github.com/aspanesar',
-      link: 'https://github.com/aspanesar',
-      linkType: ''
+      value: "https://github.com/aspanesar",
+      link: "https://github.com/aspanesar",
+      linkType: "",
     },
     {
-      title: 'Github',
-      MuIcon: '',
+      title: "Github",
+      MuIcon: "",
       icon: GithubIcon,
-      value: 'https://github.com/Ajit16',
-      link: 'https://github.com/Ajit16',
-      linkType: ''
+      value: "https://github.com/Ajit16",
+      link: "https://github.com/Ajit16",
+      linkType: "",
     },
     {
-      title: 'NPM',
-      MuIcon: '',
+      title: "NPM",
+      MuIcon: "",
       icon: NPMIcon,
-      value: 'https://www.npmjs.com/package/as-slider',
-      link: 'https://www.npmjs.com/package/as-slider',
-      linkType: ''
+      value: "https://www.npmjs.com/package/as-slider",
+      link: "https://www.npmjs.com/package/as-slider",
+      linkType: "",
     },
     {
-      title: 'Profile Link',
+      title: "Profile Link",
       icon: LinkIcon,
-      value: 'https://ajit16.github.io/',
-      link: 'https://ajit16.github.io/',
-      linkType: ''
+      value: "https://ajit16.github.io/",
+      link: "https://ajit16.github.io/",
+      linkType: "",
     },
     {
-      title: 'Download Resume',
+      title: "Download Resume",
       icon: DocDownloadIcon,
-      value: 'Download my updated resume',
-      link: 'pdf/Ajit-Singh-Resume.pdf',
-      linkType: '',
-      download: true
-    }
-  ]
+      value: "Download my updated resume",
+      link: "pdf/Ajit-Singh-Resume.pdf",
+      linkType: "",
+      download: true,
+    },
+  ],
 };
 
 export default function Home() {
@@ -139,6 +142,7 @@ export default function Home() {
             </svg>
           </span>
         </div>
+
         {/* Detail  */}
         <div className="grid grid-cols-2 gap-4 w-full">
           <div className="py-3 text-white">
@@ -168,7 +172,7 @@ export default function Home() {
                     )}
                   </span>
                   <a
-                    href={`${item.linkType ? item.linkType + ':' : ''}${
+                    href={`${item.linkType ? item.linkType + ":" : ""}${
                       item.link
                     }`}
                     className="print:text-sm"
@@ -200,7 +204,7 @@ export default function Home() {
                   </span>
 
                   <a
-                    href={`${item.linkType ? item.linkType + ':' : ''}${
+                    href={`${item.linkType ? item.linkType + ":" : ""}${
                       item.link
                     }`}
                     className="print:text-sm break-words"
@@ -240,10 +244,36 @@ export default function Home() {
         <h2 className="text-xl uppercase font-bold px-4">Summary Section</h2>
         <hr className="my-4" />
         <p className="px-4">
-        I am an accomplished IT professional with over a decade of experience in web development and software engineering, now leading teams as a Frontend Team Lead. My technical expertise spans a wide range of technologies, including HTML, CSS, JavaScript, and preprocessors like SASS/LESS, along with modern frameworks such as React.js, Redux, Next.js, and Angular. I am highly proficient in TypeScript, Tailwind CSS, Bootstrap and Material UI, enabling me to deliver responsive, scalable, and visually engaging user interfaces. Beyond frontend development, I bring backend experience with Node.js, Express.js, and NoSQL databases, as well as hands-on expertise in designing and implementing RESTful APIs.
+          I am a Sr Software Engineer and Full-Stack JavaScript Engineer with
+          over 10+ years of experience building modern, scalable, and
+          high-performance web applications. Throughout my career, I have
+          successfully delivered projects for startups, agencies, and enterprise
+          clients, transforming complex business requirements into intuitive,
+          responsive, and user-centric digital experiences.
         </p>
         <p className="px-4">
-        In my leadership role, I focus on mentoring engineers, driving technical decisions, and ensuring code quality through best practices and architecture standards. I collaborate closely with cross-functional teams to deliver solutions that balance user experience, performance, and business goals. Known for my positive attitude, strong decision-making, and proactive mindset, I thrive both as a hands-on contributor and as a team leader who fosters collaboration and continuous improvement. Passionate about solving complex challenges, I am committed to delivering high-quality results while empowering teams to achieve their best.
+          My expertise includes HTML5, CSS3, JavaScript (ES6+), TypeScript,
+          React.js, Next.js, Redux, Angular, Vite, Tailwind CSS, Bootstrap,
+          Material UI, Ant Design, and CSS preprocessors such as SASS and LESS.
+          On the backend, I have hands-on experience with Node.js, Express.js,
+          RESTful APIs, PostgreSQL (with NextJs) and NoSQL databases, allowing
+          me to contribute across the full development lifecycle when needed.
+        </p>
+        <p className="px-4">
+          In addition to my technical expertise, I have extensive experience
+          leading frontend teams, mentoring developers, establishing coding
+          standards, and driving architectural decisions. This leadership
+          background enables me to work effectively with cross-functional teams
+          while maintaining a strong focus on code quality, performance,
+          scalability, and exceptional user experience.
+        </p>
+        <p className="px-4">
+          As a freelancer, I partner closely with clients to understand their
+          business goals, provide practical technical solutions, and deliver
+          reliable, maintainable software on time. I am passionate about writing
+          clean, efficient code, solving complex technical challenges, and
+          building long-term relationships through professionalism, clear
+          communication, and consistent results.
         </p>
       </div>
 
@@ -314,7 +344,7 @@ export default function Home() {
               Bachelor of Computer Applications (BCA)
             </strong>
             <p>
-              Mata Gujri Collage, Fatehgarh Sahib (Punjabi University) <br />{' '}
+              Mata Gujri Collage, Fatehgarh Sahib (Punjabi University) <br />{" "}
               <small>2009 - 2012</small>
             </p>
           </div>
