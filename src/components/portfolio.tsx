@@ -3,6 +3,7 @@ import AjnaImg from "@/assets/projects/ajna.jpg";
 import DSRProject from "@/assets/projects/dsr.jpg";
 import FProject from "@/assets/projects/1851.png";
 import AirportExpress from "@/assets/projects/airportexpress.webp";
+import FloraImage from "@/assets/projects/flora.webp";
 
 const PortfolioList = [
   {
@@ -21,6 +22,29 @@ const PortfolioList = [
       "Headless UI",
       "SEO Friendly",
       "Stripe",
+      "Google Tag Manager",
+      "Eslint",
+      "Emailer ",
+    ],
+  },
+  {
+    name: "Flora",
+    detail:
+      "Developed a modern, full-featured e-commerce web application for botanical products, plants, and floral arrangements designed to deliver a seamless online shopping experience. Built with Next.js and TypeScript, the platform features dynamic product filtering, responsive cart management, smooth checkout flows, secure payment processing, and high-performance server-side rendering (SSR) to ensure fast load times and optimal search engine visibility across all device types.",
+    url: ["https://flora-store.vercel.app/"],
+    subUrl: [],
+    image: FloraImage,
+    video: "",
+    technologies: [
+      "NextJs",
+      "TypeScript",
+      "TailwindCSS",
+      "Zustand",
+      "Headless UI",
+      "SEO Friendly",
+      "Stripe",
+      "REST APIs",
+      "Vercel",
       "Google Tag Manager",
       "Eslint",
       "Emailer ",
